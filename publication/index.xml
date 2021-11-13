@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Publications | eleftheria </title>
+    <link>https://elbria.github.io/publication/</link>
+      <atom:link href="https://elbria.github.io/publication/index.xml" rel="self" type="application/rss+xml" />
+    <description>Publications</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© 2021 Eleftheria Briakou</copyright><lastBuildDate>Wed, 25 Aug 2021 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>https://elbria.github.io/img/icon-192.png</url>
+      <title>Publications</title>
+      <link>https://elbria.github.io/publication/</link>
+    </image>
+    
+    <item>
+      <title>Evaluating the Evaluation Metrics for Style Transfer: A Case Study in Multilingual Formality Transfer</title>
+      <link>https://elbria.github.io/publication/f/</link>
+      <pubDate>Wed, 25 Aug 2021 00:00:00 +0000</pubDate>
+      <guid>https://elbria.github.io/publication/f/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>A Review of Human Evaluation for Style Transfer</title>
+      <link>https://elbria.github.io/publication/h/</link>
+      <pubDate>Sat, 29 May 2021 00:00:00 +0000</pubDate>
+      <guid>https://elbria.github.io/publication/h/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Beyond Noise: Mitigating  the  Impact of Fine-grained Semantic Divergences  on  Neural Machine Translation</title>
+      <link>https://elbria.github.io/publication/g/</link>
+      <pubDate>Sat, 29 May 2021 00:00:00 +0000</pubDate>
+      <guid>https://elbria.github.io/publication/g/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Olá, Bonjour, Salve! XFORMAL: A Benchmark for Multilingual Formality Style Transfer</title>
+      <link>https://elbria.github.io/publication/e/</link>
+      <pubDate>Sat, 29 May 2021 00:00:00 +0000</pubDate>
+      <guid>https://elbria.github.io/publication/e/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Detecting Fine-Grained Cross-Lingual Semantic Divergences without Supervision by Learning to Rank</title>
+      <link>https://elbria.github.io/publication/a/</link>
+      <pubDate>Sat, 01 Aug 2020 00:00:00 +0000</pubDate>
+      <guid>https://elbria.github.io/publication/a/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>The University of Maryland’s Kazakh-English Neural Machine Translation System at WMT 2019</title>
+      <link>https://elbria.github.io/publication/b/</link>
+      <pubDate>Thu, 01 Aug 2019 00:00:00 +0000</pubDate>
+      <guid>https://elbria.github.io/publication/b/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Cross-Topic Distributional Semantic Representations via Unsupervised Mappings</title>
+      <link>https://elbria.github.io/publication/c/</link>
+      <pubDate>Mon, 03 Jun 2019 00:00:00 +0000</pubDate>
+      <guid>https://elbria.github.io/publication/c/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Mixture of Topic-Based Distributional Semantic and Affective Models</title>
+      <link>https://elbria.github.io/publication/d/</link>
+      <pubDate>Fri, 02 Feb 2018 00:00:00 +0000</pubDate>
+      <guid>https://elbria.github.io/publication/d/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

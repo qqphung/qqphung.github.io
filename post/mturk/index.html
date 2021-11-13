@@ -1,0 +1,1207 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="generator" content="Source Themes Academic 4.4.0">
+
+  
+
+  
+  
+  
+  
+  
+    
+    
+    
+  
+  
+
+  <meta name="author" content="Eleftheria Briakou">
+
+  
+  
+  
+    
+  
+  <meta name="description" content="setting up an amazon mechanical turk evaluation with qualification test from scratch">
+
+  
+  <link rel="alternate" hreflang="en-us" href="https://elbria.github.io/post/mturk/">
+
+  
+
+
+  
+
+  
+  
+  
+  <meta name="theme-color" content="#4169E1">
+  
+
+  
+  
+  
+  
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/academicons/1.8.6/css/academicons.min.css" integrity="sha256-uFVgMKfistnJAfoCUQigIl+JfUaP47GrRKjf6CTPVmw=" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.0/css/all.css" integrity="sha384-aOkxzJ5uQz7WBObEZcHvV5JvRW3TUc2rNPA7pe3AwnsUohiw1Vj2Rgx2KSOkF5+h" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.2.5/jquery.fancybox.min.css" integrity="sha256-ygkqlh3CYSUri3LhQxzdcm0n1EQvH2Y+U5S2idbLtxs=" crossorigin="anonymous">
+
+    
+    
+    
+      
+    
+    
+      
+      
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/styles/an-old-hope.min.css" crossorigin="anonymous" title="hl-light">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/styles/an-old-hope.min.css" crossorigin="anonymous" title="hl-dark" disabled>
+      
+    
+
+    
+
+    
+
+  
+
+  
+  
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,700|Merriweather|Roboto+Mon|Cutive+Mono|Lora:400,700|Roboto:400,700|Lobster|Arima Madurai|Courgette|Montez&display=swap">
+  
+
+  
+  
+  
+  <link rel="stylesheet" href="/css/academic.min.5c30f85aa8721630e5dbb3e1be9ae3d4.css">
+
+  
+
+  
+  
+  
+
+  
+
+  <link rel="manifest" href="/index.webmanifest">
+  <link rel="icon" type="image/png" href="/img/icon-32.png">
+  <link rel="apple-touch-icon" type="image/png" href="/img/icon-192.png">
+
+  <link rel="canonical" href="https://elbria.github.io/post/mturk/">
+
+  
+  
+  
+  
+    
+    
+  
+  
+  <meta property="twitter:card" content="summary">
+  
+  <meta property="og:site_name" content="eleftheria ">
+  <meta property="og:url" content="https://elbria.github.io/post/mturk/">
+  <meta property="og:title" content="Amazon Mechanical Turk Tutorial  | eleftheria ">
+  <meta property="og:description" content="setting up an amazon mechanical turk evaluation with qualification test from scratch"><meta property="og:image" content="https://elbria.github.io/img/icon-192.png">
+  <meta property="twitter:image" content="https://elbria.github.io/img/icon-192.png"><meta property="og:locale" content="en-us">
+  
+    
+      <meta property="article:published_time" content="2020-01-19T00:00:00&#43;00:00">
+    
+    <meta property="article:modified_time" content="2020-01-19T00:00:00&#43;00:00">
+  
+
+  
+
+
+  
+
+
+
+
+
+  <title>Amazon Mechanical Turk Tutorial  | eleftheria </title>
+
+</head>
+
+<body id="top" data-spy="scroll" data-offset="70" data-target="#TableOfContents" >
+
+  <aside class="search-results" id="search">
+  <div class="container">
+    <section class="search-header">
+
+      <div class="row no-gutters justify-content-between mb-3">
+        <div class="col-6">
+          <h1>Search</h1>
+        </div>
+        <div class="col-6 col-search-close">
+          <a class="js-search" href="#"><i class="fas fa-times-circle text-muted" aria-hidden="true"></i></a>
+        </div>
+      </div>
+
+      <div id="search-box">
+        
+        <input name="q" id="search-query" placeholder="Search..." autocapitalize="off"
+        autocomplete="off" autocorrect="off" spellcheck="false" type="search">
+        
+      </div>
+
+    </section>
+    <section class="section-search-results">
+
+      <div id="search-hits">
+        
+      </div>
+
+    </section>
+  </div>
+</aside>
+
+
+  
+<nav class="navbar navbar-light fixed-top navbar-expand-lg py-0 compensate-for-scrollbar" id="navbar-main">
+  <div class="container">
+
+    
+      <a class="navbar-brand" href="/">eleftheria </a>
+      
+      <button type="button" class="navbar-toggler" data-toggle="collapse"
+              data-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
+        <span><i class="fas fa-bars"></i></span>
+      </button>
+      
+
+    
+    <div class="collapse navbar-collapse" id="navbar">
+
+      
+      
+      <ul class="navbar-nav ml-auto">
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+          
+          
+          
+            
+          
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/#about"><span>home</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+          
+          
+          
+            
+          
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/#publications"><span>publications</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+          
+          
+          
+            
+          
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/#posts"><span>posts</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+          
+          
+          
+            
+          
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/#talks"><span>talks</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+          
+          
+          
+            
+          
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/#contact"><span>contact</span></a>
+        </li>
+
+        
+        
+
+      
+
+        
+
+        
+        <li class="nav-item">
+          <a class="nav-link js-search" href="#"><i class="fas fa-search" aria-hidden="true"></i></a>
+        </li>
+        
+
+        
+
+        
+
+      </ul>
+
+    </div>
+  </div>
+</nav>
+
+
+  <article class="article" itemscope itemtype="http://schema.org/Article">
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+  
+  
+<div class="article-container pt-3">
+  <h1 itemprop="name">Amazon Mechanical Turk Tutorial </h1>
+
+  
+  <p class="page-subtitle">Setting up an evaluation task with qualification test from scratch 🚀</p>
+  
+
+  
+    
+
+
+
+<meta content="2020-01-19 00:00:00 &#43;0000 UTC" itemprop="datePublished">
+<meta content="2020-01-19 00:00:00 &#43;0000 UTC" itemprop="dateModified">
+
+<div class="article-metadata">
+
+  
+  
+  
+  
+  <div>
+    
+
+
+
+
+  <span itemprop="author name" itemtype="http://schema.org/Person"><strong><u><a href="/authors/admin/">Eleftheria Briakou</a></u></strong></span>
+
+  </div>
+  
+  
+
+  
+  <span class="article-date">
+    
+    
+      
+    
+    <time>January 19, 2020</time>
+  </span>
+  
+
+  
+
+  
+
+  
+  
+  
+
+  
+  
+
+  
+    
+<div class="share-box" aria-hidden="true">
+  <ul class="share">
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="https://twitter.com/intent/tweet?url=https://elbria.github.io/post/mturk/&amp;text=Amazon%20Mechanical%20Turk%20Tutorial%20" target="_blank" rel="noopener" class="share-btn-twitter">
+          <i class="fab fa-twitter"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="mailto:?subject=Amazon%20Mechanical%20Turk%20Tutorial%20&amp;body=https://elbria.github.io/post/mturk/" target="_blank" rel="noopener" class="share-btn-email">
+          <i class="fas fa-envelope"></i>
+        </a>
+      </li>
+    
+  </ul>
+</div>
+
+
+  
+
+</div>
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+</div>
+
+
+
+  <div class="article-container">
+
+    <div class="article-style" itemprop="articleBody">
+      
+
+<p>Amazon Mechanical Turk (MTurk) is a crowdsourcing marketplace that can be used to get human annotations via hiring workers to perform human intelligent tasks (HITs). In this tutorial, we are going to cover the basics on how to set up an evaluation task on MTurk from scratch. To this end, we will be focusing on the evaluation of the semantic similarity between sentences as our exemplar task; though all steps described could be easily adapted to any task.</p>
+
+<hr />
+
+<h3 id="overview">Overview</h3>
+
+<p>This tutorial is split into the following five parts assuming that no prior knowledge about MTurk is required. You can treat the following list like a table of contents; if you&rsquo;d like to jump to a specific section, just click it.</p>
+
+<ul>
+<li><a href="#setting-up-accounts"><strong>Getting the basics: Setting up accounts</strong></a></li>
+<li><a href="#concepts-and-terminology"><strong>Getting the basics: Concepts and Terminology</strong></a></li>
+<li><a href="#qualification-type"><strong>Quality Control: Create your own qualification type</strong></a></li>
+<li><a href="#mturk-project"><strong>Creating an MTurk project: Using predefined layouts</strong></a></li>
+<li><a href="#publishing-batches"><strong>Go live: Publishing batches</strong></a></li>
+</ul>
+
+<hr />
+
+<h3 id="setting-up-accounts">Setting up accounts</h3>
+
+<p>To get started you need four accounts:  an AWS account, and an account on the MTurk Requester site (those are needed to use MTurk when you are ready to go live and publish your task), and one account on the Requester Sandbox, and one on the Worker Sandbox (those are needed for testing your task on an isolated environment that looks like the real MTurk website before going live and publish your task on the real website).</p>
+
+<p><strong>1️⃣ AWS account</strong></p>
+
+<p>AWS (Amazon Web Services) is a cloud platform offering reliable, scalable, and inexpensive cloud computing services and MTurk is one of those. Your billing information is stored with your AWS account, rather than your MTurk requester account. That being said, MTurk has no direct link to your credit card.</p>
+
+<p>To <a href="https://portal.aws.amazon.com/billing/signup#/start" target="_blank">sign up for an AWS account</a> you will need: a) an email account, b) a valid credit card (you will not be charged as there is a generous free tier), and c) a phone number (you will receive an automated phone call to verify your identity).</p>
+
+<p>Once you have created an AWS account, you could create an IAM user to securetely control access to your AWS resources. An IAM user could grant permission to administer and use resources in your AWS account (such as access the MTurk API) without having to share your root credentials. To add an IAM user, click on the <code>My Security Credentials</code> tab and then <code>Add user</code> following the <code>Users</code> tab under the DashBoard appearing on the left of the page.</p>
+
+<p><strong>2️⃣ MTurk Requester account</strong></p>
+
+<p>Next, you will need to <a href="https://requester.mturk.com/create/projects/new" target="_blank">create and register an MTurk Requester account</a>.</p>
+
+<div class="alert alert-note">
+  <div>
+    After completing the two above steps you will have to <a href="https://requester.mturk.com/developer" target="_blank">link your AWS account to your MTurk Requester account</a> via using your AWS Root user credentials.
+  </div>
+</div>
+
+<p><strong>3️⃣ Requester SandBox account</strong></p>
+
+<p>We are now going to <a href="https://requestersandbox.mturk.com" target="_blank">create a Requester SandBox account</a> in the Amazon Mechanical Turk Sandbox testing environment. This website looks exactly the same as the real MTurk website and we are going to use it to test on our tasks and qualifications before we launch them for real.</p>
+
+<div class="alert alert-note">
+  <div>
+    At this point, you will also need to <a href="https://requestersandbox.mturk.com/developer" target="_blank">link your AWS account to your Requester SandBox account</a> as per Link Your AWS account to your MTurk Requester account.
+  </div>
+</div>
+
+<p><strong>4️⃣ Worker SandBox account</strong></p>
+
+<p>Finally, to test how our task will be presented to workers we are going to <a href="https://workersandbox.mturk.com" target="_blank">create a Worker SandBox account</a>.</p>
+
+<hr />
+
+<h3 id="concepts-and-terminology">Concepts and Terminology</h3>
+
+<p>Below, we briefly describe the basic conceptd and terminology you should know to effectively use MTurk.</p>
+
+<ul>
+<li><p><strong>Requester</strong>: a company, organization, or person that creates and submits tasks (HITs) to MTurk for Workers to perform. In our case, we are the Requesters.</p></li>
+
+<li><p><strong>Human Intelligent Task (HIT)</strong>: a task that a Requester submits to MTurk for Workers to perform. A HIT represents a single, self-contained task, for example, &ldquo;Describe what emotion is conveyed in the following text.&rdquo; In our case, an HIT is one example that we want to get an annotation for.</p></li>
+
+<li><p><strong>Worker</strong>: a person who performs the tasks specified by a Requester in a HIT.</p></li>
+
+<li><p><strong>Assignment</strong>: specifies how many people can submit completed work for your HIT. (Hint: the number of assignments is the same as the number of workers working on a single HIT).</p></li>
+
+<li><p><strong>Reward</strong>: the money a Requester pays Workers for satisfactory work they do on their HITs.</p></li>
+</ul>
+
+<hr />
+
+<h3 id="qualification-type">Qualification Type</h3>
+
+<p>Amazon Mechanical Turk gives us the ability to add qualification types in the creation or processing of our HIT for better quality control. Once we attach a qualification type to an HIT, a Worker can only perform the task if they have this qualification. Apart from predefined qualifications, MTurk gives us the flexibility to create our own qualification type to represent a Worker&rsquo;s skill or ability to perform the task at hand.</p>
+
+<p>For our purposes, we are now going to create a costumized qualification test consisting of multiple choice questionsusing the MTurk API. Once the qualification type has been attached to our HIT we can find it under the  <code>Qualification Types you have created</code> tab on the <code>Worker requirements section</code> (more on this later).</p>
+
+<p>In this tutorial we are going to access the MTurk API using <a href="https://boto3.amazonaws.com/v1/documentation/api/latest/index.html" target="_blank">Boto3</a> the Amazon Web Services SDK for Python. First, we need to install the latest Boto3 release via pip:</p>
+
+<pre><code class="language-python">pip install boto3
+</code></pre>
+
+<p>Once installation is done, we are ready to create, update, delete or assign a qualification type to a worker or an HIT at Amazon Mechanical Turk!</p>
+
+<p>Import the required libraries:</p>
+
+<pre><code class="language-python">   import argparse
+   import logging
+   import boto3
+   import os
+</code></pre>
+
+<p>To make our code flexible we pass MTurk parameters as arguments to the main script. <strong>Important note: Even if you prefer to hard code those parameters it is highly recommended to atleast pass the IAM credentials as such!</strong></p>
+
+<pre><code class="language-python">def main():
+
+	&quot;&quot;&quot;
+	Code for creating/updating/deleting a qualification type at Amazon Mechanical Turk
+	Important Note: Do not hard code the key and secret_key arguments
+	&quot;&quot;&quot;
+
+	parser = argparse.ArgumentParser(description='Create qualification type for English-French bilingual speakers')
+	parser.add_argument('--aws_access_key_id', help='aws_access_key_id -- DO NOT HARDCODE IT')
+	parser.add_argument('--aws_secret_access_key', help='aws_secret_access_key -- DO NOT HARDCODE IT')
+	parser.add_argument('--questions', help='qualification questions (xml file)')
+	parser.add_argument('--answers', help='answers to qualification questions (xml file)')
+	parser.add_argument('--worker_id', help='worker id, if given we give worker access to the qualification type', \                            	
+					default=None)	
+	parser.add_argument('--Name',  help='name of qualification test', default='English French qualification test for bilingual speakers.')
+	parser.add_argument('--Keywords', help='keywords that help worker find your test', \
+					default='test, qualification, english, french, same meaning, same, meaning, bilingual')
+	parser.add_argument('--Description', help='description of qualification test', \
+                       			default='This is a qualification test for bilingual English-French speakers')
+	parser.add_argument('--TestDurationInSeconds', help='time for workers to complete the test', default=5400)
+	parser.add_argument('--RetryDelayInSeconds',help='time workers should wait until they retake the test', default=1)
+	parser.add_argument('--update', help='if true it updates an existing qualification type', action='store_true')
+	parser.add_argument('--verbose', help='increase output verbosity', default=True)
+	parser.add_argument('--delete', help='delete qualification type', action='store_true')
+	args = parser.parse_args()
+
+	if args.verbose:
+		logging.basicConfig(format='%(asctime)s : %(levelname)s : %(message)s', level=logging.INFO)
+</code></pre>
+
+<p>The first step in the creation of our qualification test is to read our question and answer files which should be in xml format. The answer file contains the gold standard answers to the questions provided under the question file and will be later used to automatically assign scores for Workers taking the test. Below, we include exemplar <a href="#exemplar-questionform-file">QuestionForm</a> and <a href="#exemplar-answerkey-file">AnswerKey</a> files in xml format.</p>
+
+<pre><code class="language-python">	questions = open(args.questions, mode='r').read()
+	answers = open(args.answers, mode='r').read()
+</code></pre>
+
+<p>Following, we create a low-level service <a href="https://boto3.amazonaws.com/v1/documentation/api/latest/_modules/boto3.html#client" target="_blank">client</a> using boto3.</p>
+
+<pre><code class="language-python">	mturk = boto3.client('mturk',
+                         	aws_access_key_id=args.aws_access_key_id,
+                         	aws_secret_access_key=args.aws_secret_access_key,
+                         	region_name='us-east-1',
+                         	endpoint_url='https://mturk-requester-sandbox.us-east-1.amazonaws.com')
+</code></pre>
+
+<div class="alert alert-note">
+  <div>
+    The <code>endpoint_url</code> argument should be set to <code>'https://mturk-requester-sandbox.us-east-1.amazonaws.com'</code> during testing time at sandbox. When you are ready to go live at MTurk, replace it with the url: <code>'https://mturk-requester.us-east-1.amazonaws.com'</code>.
+  </div>
+</div>
+
+<p>Let&rsquo;s now create our first qualification type! Note that each qualification type is associated with a unique ID that could be used to update, delete or assign a qualification type to a worker through boto3. That being said, it is important to save this ID so that we could refer to our qualification type in the future.</p>
+
+<pre><code class="language-python">	if not args.update:
+
+		# Create qualification type based on questions-answers provided and save the qualification id
+		try:
+			qual_response = mturk.create_qualification_type(
+                        				Name=args.Name,
+                         				Keywords=args.Keywords,
+                         				Description=args.Description,
+                         				QualificationTypeStatus='Active',
+                               				Test=questions,
+                               				AnswerKey=answers,
+                               				RetryDelayInSeconds=args.RetryDelayInSeconds,
+                               				TestDurationInSeconds=args.TestDurationInSeconds)
+
+			qualification_type_id  = qual_response['QualificationType']['QualificationTypeId']
+
+			logging.info(' Congrats! You have created a new qualification type')
+			logging.info(' You can refer to it using the following id: %s' % (qualification_type_id))
+			logging.warning(' The qualification_type_id is saved under: qualification_type_id file.')
+			logging.warning(' This is the id you will use to refer to your qualification test when creating your HIT!')
+
+			q_id = open('qualification_type_id','w')
+			q_id.write(qualification_type_id)
+
+		# If the qualification type has already been created try read the if from file
+ 		except:
+			logging.warning(' You have already created your qualification type. Read from qualification_type_id file...')
+           		try:
+               			q_id = open('qualification_type_id','r')
+               			qualification_type_id =  q_id.readline()
+           		except:
+               			logging.error(' You have probably deleted the qualification type id file')
+</code></pre>
+
+<p>If we want to update an already created qualification type we can simply access it through the its unique ID.</p>
+
+<pre><code class="language-python">	# Update an already created qualification type
+	else:
+		logging.warning(' You have already created your qualification type. Read from qualification_type_id file...')
+		try:
+			q_id = open('qualification_type_id', 'r')
+			qualification_type_id = q_id.readline()
+           		mturk.update_qualification_type(
+                   			QualificationTypeId=qualification_type_id,
+                   			Description=args.Description,
+                   			Test=questions,
+                   			AnswerKey=answers,
+                  			RetryDelayInSeconds=args.RetryDelayInSeconds,
+                   			TestDurationInSeconds=args.TestDurationInSeconds)
+
+		except:
+           		logging.error(' You have probably deleted the qualification type id file')
+</code></pre>
+
+<p>Now that we have learned how to create and update a qualification type we are going to assign it to a worker. To do so we should be provided with the ID of the worker. Note that this is important at test time as you may wish to link your type to your worker account and take the test. When you are ready to shift from SandBox to the real platform you can just link the qualification type to your HIT or to a specific worker easily through the MTurk website.</p>
+
+<pre><code class="language-python">	# If worker id is provided try to link to it
+	if args.worker_id:
+		mturk.associate_qualification_with_worker(
+           				QualificationTypeId=qualification_type_id,
+           				WorkerId=args.worker_id,
+           				IntegerValue=0,
+           				SendNotification=True)
+
+		response = mturk.list_workers_with_qualification_type(
+           				QualificationTypeId=qualification_type_id)
+
+ 		logging.info(' You have associated your qualification type to the worker with id: %s ' % str(response))
+	else:
+		logging.info(' You may want to associate your qualification type to a worker or attach it to an HIT!')
+</code></pre>
+
+<p>Finally, you could delete the qualification type via again using its ID.</p>
+
+<pre><code class="language-python">        # Delete the qualification type 
+	if args.delete:
+		try:
+			q_id = open('qualification_type_id', 'r')
+			qualification_type_id = q_id.readline()
+			mturk.delete_qualification_type(QualificationTypeId=qualification_type_id)
+			os.remove('qualification_type_id')
+			logging.warning(' You have already created your qualification type. Read from qualification_type_id file...')
+		except:
+			logging.error(' You have probably deleted the qualification type id file')
+</code></pre>
+
+<p>Done! We have now created our own qualification test. Note that this is just one way to ensure high quality annotations through MTurk; there are also plenty of other <a href="https://software.intel.com/en-us/articles/hands-on-ai-part-7-augment-ai-with-human-intelligence-using-amazon-mechanical-turk" target="_blank">tips on how to use crowdsourcing through quality control</a>.</p>
+
+<h3 id="exemplar-questionform-file">Exemplar QuestionForm file</h3>
+
+<pre><code class="language-xml">&lt;QuestionForm xmlns='http://mechanicalturk.amazonaws.com/AWSMechanicalTurkDataSchemas/2005-10-01/QuestionForm.xsd'&gt;
+    &lt;Question&gt;
+      &lt;QuestionIdentifier&gt;en_fr_qual_test_0&lt;/QuestionIdentifier&gt;
+      &lt;DisplayName&gt;Q0&lt;/DisplayName&gt;
+      &lt;IsRequired&gt;true&lt;/IsRequired&gt;
+      &lt;QuestionContent&gt;
+        &lt;Text&gt; Which statement best describes the relationship between the English and the French sentence? &lt;/Text&gt;
+          &lt;Text&gt; English and French texts: &lt;/Text&gt;
+          &lt;EmbeddedBinary&gt;
+          &lt;EmbeddedMimeType&gt;
+            &lt;Type&gt;image&lt;/Type&gt;
+            &lt;SubType&gt;png&lt;/SubType&gt;
+          &lt;/EmbeddedMimeType&gt;
+          &lt;DataURL&gt;https://path_to_bucket.s3.amazonaws.com/0.png&lt;/DataURL&gt;
+          &lt;AltText&gt;english-french sentence-pair&lt;/AltText&gt;
+          &lt;Width&gt;700&lt;/Width&gt;
+          &lt;Height&gt;200&lt;/Height&gt;
+        &lt;/EmbeddedBinary&gt;
+      &lt;/QuestionContent&gt;
+      &lt;AnswerSpecification&gt;
+        &lt;SelectionAnswer&gt;
+          &lt;StyleSuggestion&gt;radiobutton&lt;/StyleSuggestion&gt;
+          &lt;Selections&gt;
+            &lt;Selection&gt;
+              &lt;SelectionIdentifier&gt;1&lt;/SelectionIdentifier&gt;
+              &lt;Text&gt; are completely unrelated.&lt;/Text&gt;
+            &lt;/Selection&gt;
+            &lt;Selection&gt;
+              &lt;SelectionIdentifier&gt;2&lt;/SelectionIdentifier&gt;
+              &lt;Text&gt; have a few words in common but convey unrelated information about them.&lt;/Text&gt;
+            &lt;/Selection&gt;
+            &lt;Selection&gt;
+              &lt;SelectionIdentifier&gt;3&lt;/SelectionIdentifier&gt;
+              &lt;Text&gt; convey mostly the same information, but some information is added and/or missing on either or both sides.&lt;/Text&gt;
+            &lt;/Selection&gt;
+              &lt;Selection&gt;
+              &lt;SelectionIdentifier&gt;4&lt;/SelectionIdentifier&gt;
+              &lt;Text&gt; have the exact same meaning.&lt;/Text&gt;
+            &lt;/Selection&gt;
+          &lt;/Selections&gt;
+        &lt;/SelectionAnswer&gt;
+      &lt;/AnswerSpecification&gt;
+  &lt;/Question&gt;
+&lt;/QuestionForm&gt;
+</code></pre>
+
+<h3 id="exemplar-answerkey-file">Exemplar AnswerKey file</h3>
+
+<pre><code class="language-xml">&lt;AnswerKey xmlns=&quot;http://mechanicalturk.amazonaws.com/AWSMechanicalTurkDataSchemas/2005-10-01/AnswerKey.xsd&quot;&gt;
+  &lt;Question&gt;
+    &lt;QuestionIdentifier&gt;en_fr_qual_test_0&lt;/QuestionIdentifier&gt;
+    &lt;AnswerOption&gt;
+      &lt;SelectionIdentifier&gt;1&lt;/SelectionIdentifier&gt;
+      &lt;AnswerScore&gt;-1&lt;/AnswerScore&gt;
+    &lt;/AnswerOption&gt;
+    &lt;AnswerOption&gt;
+      &lt;SelectionIdentifier&gt;2&lt;/SelectionIdentifier&gt;
+      &lt;AnswerScore&gt;0&lt;/AnswerScore&gt;
+    &lt;/AnswerOption&gt;
+    &lt;AnswerOption&gt;
+      &lt;SelectionIdentifier&gt;3&lt;/SelectionIdentifier&gt;
+      &lt;AnswerScore&gt;1&lt;/AnswerScore&gt;
+    &lt;/AnswerOption&gt;
+    &lt;AnswerOption&gt;
+      &lt;SelectionIdentifier&gt;4&lt;/SelectionIdentifier&gt;
+      &lt;AnswerScore&gt;0&lt;/AnswerScore&gt;
+    &lt;/AnswerOption&gt;
+  &lt;/Question&gt;
+&lt;/AnswerKey&gt;
+</code></pre>
+
+<hr />
+
+<h3 id="mturk-project">MTurk Project</h3>
+
+<p>Now that we have created our qualification test we are ready to create our MTurk project using one of the customizable templates. First, log in to the MTurk Sandbox and click on the <code>New Project</code> link in the <code>Create</code> tab. Choose the most suitable template for your task and then click on <code>Create Project</code>. For our tutorial, we will choose the <em>Emotion Detection</em> template, and customize the <code>Desing Layout</code> section as shown below:</p>
+
+<pre><code class="language-HTML">&lt;!-- You must include this JavaScript file --&gt;
+&lt;script src=&quot;https://assets.crowd.aws/crowd-html-elements.js&quot;&gt;&lt;/script&gt;
+
+&lt;!-- For the full list of available Crowd HTML Elements and their input/output documentation,
+      please refer to https://docs.aws.amazon.com/sagemaker/latest/dg/sms-ui-template-reference.html --&gt;
+
+&lt;!-- You must include crowd-form so that your task submits answers to MTurk --&gt;
+&lt;crowd-form answer-format=&quot;flatten-objects&quot;&gt;
+
+    &lt;!-- Your image file URLs will be substituted for the &quot;image_url&quot; variable below
+          when you publish a batch with a CSV input file containing multiple image file URLs.
+          To preview the element with an example image, try setting the src attribute to
+          &quot;https://s3.amazonaws.com/cv-demo-images/basketball-outdoor.jpg&quot; --&gt;
+     &lt;crowd-classifier
+      header=&quot;Choose the option that best describes the relation between the English and French sentences.&quot;
+      name=&quot;divergent&quot;
+      categories=&quot;['completely unrelated',
+                   'a few words in common but convey unrelated information about them',
+                   'mostly the same meaning, except for some details',
+                   'exact same meaning']&quot;
+    &gt;
+
+    &lt;classification-target&gt;
+    &lt;p&gt;&lt;img src=&quot;${image_url}&quot; style=&quot;max-width: 100%; max-height: 250px&quot; /&gt;&lt;/p&gt;
+    &lt;/classification-target&gt;
+
+    &lt;full-instructions header=&quot;Guidelines for comparing English and French text&quot;&gt;
+        You are asked to rate how &lt;strong&gt;close the meaning&lt;/strong&gt; of the French and English text are, on a scale from 1 to 4.
+
+        &lt;p&gt;
+        &lt;strong&gt;1:&lt;/strong&gt; English and French texts are &lt;strong&gt;completely unrelated&lt;/strong&gt; &lt;br&gt;&lt;br&gt;
+
+         &lt;i&gt;&lt;u&gt; Example &lt;/i&gt;&lt;/u&gt; &lt;br&gt;
+         &lt;font color=&quot;blue&quot;&gt; &lt;i&gt; Egnlish: The girl remained missing as of April 2016. &lt;/i&gt;&lt;/font&gt; &lt;br&gt;
+         &lt;font color=&quot;deeppink&quot;&gt; &lt;i&gt; French: L'Union athlétique libournaise a disparu en 2016.&lt;/i&gt;&lt;/font&gt; &lt;br&gt;
+        &lt;/p&gt;
+
+      &lt;/full-instructions&gt;
+      
+    &lt;short-instructions&gt;
+    You are asked to rate how close the meaning of the French and English text are, on a scale from 1 to 4.
+    &lt;/short-instructions&gt;
+&lt;/crowd-form&gt;
+</code></pre>
+
+<p>Once you are satisfied with the result you can preview the task and finish. Note that <code>${image_url}</code> is a template variable that will be substituted with the actual name of the image from your CSV file when you publish a tasks using this template as described in the next section.</p>
+
+<hr />
+
+<h3 id="publishing-batches">Publishing batches</h3>
+
+<p>Now the project is set up we can go ahead and publish batches of tasks. This is simply done by clicking on the <code>Publish Batch</code> button on the new project and uploading a CSV file containing your HIT data. Note that you should add the name of the template variabel (e.g. imaga_url) as a header to your CSV file. Once the CSV file is uploaded, MTurk will create an individual HIT for each row in your file.</p>
+
+<p>Enjoy! ☕️</p>
+
+<hr />
+
+<h3 id="references">References</h3>
+
+<ul>
+<li><a href="https://katherinemwood.github.io/post/qualifications/" target="_blank">Pre-screen MTurk workers with custom qualifications (Katherine Wood blog post)</a></li>
+<li><a href="https://katherinemwood.github.io/post/mturk_dev_intro/" target="_blank">Getting started with the Mechanical Turk API (Katherine Wood blog post)</a></li>
+<li><a href="https://docs.aws.amazon.com/AWSMechTurk/latest/AWSMechanicalTurkGettingStartedGuide/SetUp.html" target="_blank">Setting Up Accounts and Tools (AWS Documentation)</a></li>
+<li><a href="https://blog.mturk.com/tutorial-how-to-label-thousands-of-images-using-the-crowd-bea164ccbefc" target="_blank">Tutorial: How to label thousands of images using the crowd (MTurk blog post)</a></li>
+<li><a href="https://blog.mturk.com/tutorial-understanding-hits-and-assignments-d2be35102fbd" target="_blank">Tutorial: Understanding HITs and Assignments (MTurk blog post)</a></li>
+<li><a href="https://blog.mturk.com/qualifications-and-worker-task-quality-best-practices-886f1f4e03fc" target="_blank">Qualifications and Worker Task Quality (MTurk blog post)</a></li>
+<li><a href="https://blog.mturk.com/tutorial-a-beginners-guide-to-crowdsourcing-ml-training-data-with-python-and-mturk-d8df4bdf2977" target="_blank">Tutorial: A beginner’s guide to crowdsourcing ML training data with Python and MTurk (MTurk blog post)</a></li>
+<li><a href="https://blog.mturk.com/introducing-mechanical-turk-api-support-for-iam-credentials-8f2de8cd6afb" target="_blank">Introducing Amazon Mechanical Turk API support for IAM credentials (MTurk blog post)</a></li>
+<li><a href="https://boto3.amazonaws.com/v1/documentation/api/latest/index.html" target="_blank">Boto3 Documentation</a></li>
+<li><a href="https://docs.aws.amazon.com/IAM/latest/UserGuide/introduction.html" target="_blank">AWS Identity and Access Management: What is IAM? (AWS Documentation)</a></li>
+<li><a href="https://docs.aws.amazon.com/AWSMechTurk/latest/RequesterUI/PublishingYourBatchofHITs.html" target="_blank">Requister UI Guide: Publishing a Batch (AWS Documentation)</a></li>
+<li><a href="https://blog.mturk.com/using-csv-files-to-create-multiple-hits-in-the-requester-ui-22a25ec563dc" target="_blank">Using CSV Files to Create Multiple HITs in the Requester UI (MTurk blog post)</a></li>
+<li><a href="https://software.intel.com/en-us/articles/hands-on-ai-part-7-augment-ai-with-human-intelligence-using-amazon-mechanical-turk" target="_blank">Hands-On AI Part 7: Augment AI with Human Intelligence Using Amazon Mechanical Turk</a></li>
+</ul>
+
+    </div>
+
+    
+
+
+    
+
+
+
+    
+      
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+  
+
+
+
+
+
+  
+  
+  
+    
+  
+  
+  <div class="media author-card" itemscope itemtype="http://schema.org/Person">
+    
+      
+      <img class="portrait mr-3" src="/authors/admin/avatar_hu6aacef72fe6b76157a1f6a1069308c9c_2458698_250x250_fill_q100_lanczos_center.jpg" itemprop="image" alt="Avatar">
+    
+
+    <div class="media-body">
+      <h5 class="card-title" itemprop="name"><a href="https://elbria.github.io/">Eleftheria Briakou</a></h5>
+      <h6 class="card-subtitle">Ph.D. Student</h6>
+      <p class="card-text" itemprop="description">My research interests span semantics, multilingual NLP and machine translation.</p>
+      <ul class="network-icon" aria-hidden="true">
+        
+          
+          
+          
+            
+          
+          
+          
+          
+          
+          <li>
+            <a itemprop="sameAs" href="mailto:ebriakou@sc.umd.edu" >
+              <i class="fas fa-envelope"></i>
+            </a>
+          </li>
+        
+          
+          
+          
+            
+          
+          
+          
+          
+          
+            
+          
+          <li>
+            <a itemprop="sameAs" href="https://twitter.com/ebriakou" target="_blank" rel="noopener">
+              <i class="fab fa-twitter"></i>
+            </a>
+          </li>
+        
+          
+          
+          
+          
+          
+          
+          
+            
+          
+          <li>
+            <a itemprop="sameAs" href="https://scholar.google.com/citations?user=bxqqNFEAAAAJ&amp;hl=el&amp;oi=ao" target="_blank" rel="noopener">
+              <i class="ai ai-google-scholar"></i>
+            </a>
+          </li>
+        
+          
+          
+          
+            
+          
+          
+          
+          
+          
+            
+          
+          <li>
+            <a itemprop="sameAs" href="https://github.com/Elbria" target="_blank" rel="noopener">
+              <i class="fab fa-github"></i>
+            </a>
+          </li>
+        
+          
+          
+          
+          
+          
+          
+          
+            
+          
+          <li>
+            <a itemprop="sameAs" href="https://www.researchgate.net/profile/Eleftheria_Briakou" target="_blank" rel="noopener">
+              <i class="ai ai-researchgate"></i>
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+
+
+      
+      
+    
+
+    
+    <div class="article-widget">
+      
+<div class="post-nav">
+  
+  
+  
+  <div class="post-nav-item">
+    <div class="meta-nav">Next</div>
+    <a href="/post/refresd/" rel="next">Rationalized English-French Semantic Divergences: annotation workflow</a>
+  </div>
+  
+  
+</div>
+
+    </div>
+    
+
+    
+
+
+  </div>
+</article>
+
+      
+
+    
+    
+
+    
+    
+    
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/4.1.4/imagesloaded.pkgd.min.js" integrity="sha256-lqvxZrPLtfffUl2G/e7szqSvPBILGbwmsGE1MKlOi0Q=" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.6/isotope.pkgd.min.js" integrity="sha256-CBrpuqrMhXwcLLUd5tvQ4euBHCdh7wGlDfNz8vbu/iI=" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.2.5/jquery.fancybox.min.js" integrity="sha256-X5PoE3KU5l+JcX+w09p/wHl9AzK333C4hJ2I9S5mD4M=" crossorigin="anonymous"></script>
+
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mermaid/8.0.0/mermaid.min.js" integrity="sha256-0w92bcB21IY5+rGI84MGj52jNfHNbXVeQLrZ0CGdjNY=" crossorigin="anonymous" title="mermaid"></script>
+      
+
+      
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/highlight.min.js" integrity="sha256-aYTdUrn6Ow1DDgh5JTc3aDGnnju48y/1c8s1dgkYPQ8=" crossorigin="anonymous"></script>
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/languages/python3.min.js"></script>
+        
+      
+
+      
+      
+    
+
+    
+    
+
+    
+    
+    <script>hljs.initHighlightingOnLoad();</script>
+    
+
+    
+    
+    <script>
+      const search_index_filename = "/index.json";
+      const i18n = {
+        'placeholder': "Search...",
+        'results': "results found",
+        'no_results': "No results found"
+      };
+      const content_type = {
+        'post': "Posts",
+        'project': "Projects",
+        'publication' : "Publications",
+        'talk' : "Talks"
+        };
+    </script>
+    
+
+    
+    
+
+    
+    
+    <script id="search-hit-fuse-template" type="text/x-template">
+      <div class="search-hit" id="summary-{{key}}">
+      <div class="search-hit-content">
+        <div class="search-hit-name">
+          <a href="{{relpermalink}}">{{title}}</a>
+          <div class="article-metadata search-hit-type">{{type}}</div>
+          <p class="search-hit-description">{{snippet}}</p>
+        </div>
+      </div>
+      </div>
+    </script>
+    
+
+    
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/3.2.1/fuse.min.js" integrity="sha256-VzgmKYmhsGNNN4Ph1kMW+BjoYJM2jV5i4IlFoeZA9XI=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/jquery.mark.min.js" integrity="sha256-4HLtjeVgH0eIB3aZ9mLYF6E8oU5chNdjU6p6rrXpl9U=" crossorigin="anonymous"></script>
+    
+
+    
+    
+
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+      
+    
+    
+    
+    
+    <script src="/js/academic.min.16bbb3750feb7244c9bc409a5a4fe678.js"></script>
+
+    
+
+
+
+
+
+
+  
+  <div class="container">
+    <footer class="site-footer">
+  
+
+  <p class="powered-by">
+    &copy; 2021 Eleftheria Briakou &middot; 
+
+    Powered by the
+    <a href="https://sourcethemes.com/academic/" target="_blank" rel="noopener">Academic theme</a> for
+    <a href="https://gohugo.io" target="_blank" rel="noopener">Hugo</a>.
+
+    
+    <span class="float-right" aria-hidden="true">
+      <a href="#" id="back_to_top">
+        <span class="button_icon">
+          <i class="fas fa-chevron-up fa-2x"></i>
+        </span>
+      </a>
+    </span>
+    
+  </p>
+</footer>
+
+  </div>
+  
+
+  
+<div id="modal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Cite</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <pre><code class="tex hljs"></code></pre>
+      </div>
+      <div class="modal-footer">
+        <a class="btn btn-outline-primary my-1 js-copy-cite" href="#" target="_blank">
+          <i class="fas fa-copy"></i> Copy
+        </a>
+        <a class="btn btn-outline-primary my-1 js-download-cite" href="#" target="_blank">
+          <i class="fas fa-download"></i> Download
+        </a>
+        <div id="modal-error"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>

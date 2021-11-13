@@ -1,0 +1,902 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="generator" content="Source Themes Academic 4.4.0">
+
+  
+
+  
+  
+  
+  
+  
+    
+    
+    
+  
+  
+
+  <meta name="author" content="Eleftheria Briakou">
+
+  
+  
+  
+    
+  
+  <meta name="description" content="bits and pieces missing from (my) paper descriptions.">
+
+  
+  <link rel="alternate" hreflang="en-us" href="https://elbria.github.io/post/refresd/">
+
+  
+
+
+  
+
+  
+  
+  
+  <meta name="theme-color" content="#4169E1">
+  
+
+  
+  
+  
+  
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/academicons/1.8.6/css/academicons.min.css" integrity="sha256-uFVgMKfistnJAfoCUQigIl+JfUaP47GrRKjf6CTPVmw=" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.0/css/all.css" integrity="sha384-aOkxzJ5uQz7WBObEZcHvV5JvRW3TUc2rNPA7pe3AwnsUohiw1Vj2Rgx2KSOkF5+h" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.2.5/jquery.fancybox.min.css" integrity="sha256-ygkqlh3CYSUri3LhQxzdcm0n1EQvH2Y+U5S2idbLtxs=" crossorigin="anonymous">
+
+    
+    
+    
+      
+    
+    
+      
+      
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/styles/an-old-hope.min.css" crossorigin="anonymous" title="hl-light">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/styles/an-old-hope.min.css" crossorigin="anonymous" title="hl-dark" disabled>
+      
+    
+
+    
+
+    
+
+  
+
+  
+  
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,700|Merriweather|Roboto+Mon|Cutive+Mono|Lora:400,700|Roboto:400,700|Lobster|Arima Madurai|Courgette|Montez&display=swap">
+  
+
+  
+  
+  
+  <link rel="stylesheet" href="/css/academic.min.5c30f85aa8721630e5dbb3e1be9ae3d4.css">
+
+  
+
+  
+  
+  
+
+  
+
+  <link rel="manifest" href="/index.webmanifest">
+  <link rel="icon" type="image/png" href="/img/icon-32.png">
+  <link rel="apple-touch-icon" type="image/png" href="/img/icon-192.png">
+
+  <link rel="canonical" href="https://elbria.github.io/post/refresd/">
+
+  
+  
+  
+  
+    
+    
+  
+  
+  <meta property="twitter:card" content="summary">
+  
+  <meta property="og:site_name" content="eleftheria ">
+  <meta property="og:url" content="https://elbria.github.io/post/refresd/">
+  <meta property="og:title" content="Rationalized English-French Semantic Divergences: annotation workflow | eleftheria ">
+  <meta property="og:description" content="bits and pieces missing from (my) paper descriptions."><meta property="og:image" content="https://elbria.github.io/img/icon-192.png">
+  <meta property="twitter:image" content="https://elbria.github.io/img/icon-192.png"><meta property="og:locale" content="en-us">
+  
+    
+      <meta property="article:published_time" content="2020-10-27T00:00:00&#43;00:00">
+    
+    <meta property="article:modified_time" content="2020-10-27T00:00:00&#43;00:00">
+  
+
+  
+
+
+  
+
+
+
+
+
+  <title>Rationalized English-French Semantic Divergences: annotation workflow | eleftheria </title>
+
+</head>
+
+<body id="top" data-spy="scroll" data-offset="70" data-target="#TableOfContents" >
+
+  <aside class="search-results" id="search">
+  <div class="container">
+    <section class="search-header">
+
+      <div class="row no-gutters justify-content-between mb-3">
+        <div class="col-6">
+          <h1>Search</h1>
+        </div>
+        <div class="col-6 col-search-close">
+          <a class="js-search" href="#"><i class="fas fa-times-circle text-muted" aria-hidden="true"></i></a>
+        </div>
+      </div>
+
+      <div id="search-box">
+        
+        <input name="q" id="search-query" placeholder="Search..." autocapitalize="off"
+        autocomplete="off" autocorrect="off" spellcheck="false" type="search">
+        
+      </div>
+
+    </section>
+    <section class="section-search-results">
+
+      <div id="search-hits">
+        
+      </div>
+
+    </section>
+  </div>
+</aside>
+
+
+  
+<nav class="navbar navbar-light fixed-top navbar-expand-lg py-0 compensate-for-scrollbar" id="navbar-main">
+  <div class="container">
+
+    
+      <a class="navbar-brand" href="/">eleftheria </a>
+      
+      <button type="button" class="navbar-toggler" data-toggle="collapse"
+              data-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
+        <span><i class="fas fa-bars"></i></span>
+      </button>
+      
+
+    
+    <div class="collapse navbar-collapse" id="navbar">
+
+      
+      
+      <ul class="navbar-nav ml-auto">
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+          
+          
+          
+            
+          
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/#about"><span>home</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+          
+          
+          
+            
+          
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/#publications"><span>publications</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+          
+          
+          
+            
+          
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/#posts"><span>posts</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+          
+          
+          
+            
+          
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/#talks"><span>talks</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+          
+          
+          
+            
+          
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/#contact"><span>contact</span></a>
+        </li>
+
+        
+        
+
+      
+
+        
+
+        
+        <li class="nav-item">
+          <a class="nav-link js-search" href="#"><i class="fas fa-search" aria-hidden="true"></i></a>
+        </li>
+        
+
+        
+
+        
+
+      </ul>
+
+    </div>
+  </div>
+</nav>
+
+
+  <article class="article" itemscope itemtype="http://schema.org/Article">
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+  
+  
+<div class="article-container pt-3">
+  <h1 itemprop="name">Rationalized English-French Semantic Divergences: annotation workflow</h1>
+
+  
+  <p class="page-subtitle">Bits and pieces missing from (my) paper descriptions.</p>
+  
+
+  
+    
+
+
+
+<meta content="2020-10-27 00:00:00 &#43;0000 UTC" itemprop="datePublished">
+<meta content="2020-10-27 00:00:00 &#43;0000 UTC" itemprop="dateModified">
+
+<div class="article-metadata">
+
+  
+  
+  
+  
+  <div>
+    
+
+
+
+
+  <span itemprop="author name" itemtype="http://schema.org/Person"><strong><u><a href="/authors/admin/">Eleftheria Briakou</a></u></strong></span>
+
+  </div>
+  
+  
+
+  
+  <span class="article-date">
+    
+    
+      
+    
+    <time>October 27, 2020</time>
+  </span>
+  
+
+  
+
+  
+
+  
+  
+  
+
+  
+  
+
+  
+    
+<div class="share-box" aria-hidden="true">
+  <ul class="share">
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="https://twitter.com/intent/tweet?url=https://elbria.github.io/post/refresd/&amp;text=Rationalized%20English-French%20Semantic%20Divergences:%20annotation%20workflow" target="_blank" rel="noopener" class="share-btn-twitter">
+          <i class="fab fa-twitter"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="mailto:?subject=Rationalized%20English-French%20Semantic%20Divergences:%20annotation%20workflow&amp;body=https://elbria.github.io/post/refresd/" target="_blank" rel="noopener" class="share-btn-email">
+          <i class="fas fa-envelope"></i>
+        </a>
+      </li>
+    
+  </ul>
+</div>
+
+
+  
+
+</div>
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+</div>
+
+
+
+  <div class="article-container">
+
+    <div class="article-style" itemprop="articleBody">
+      
+
+<p>In this blog post, I go through (all) annotation decisions involved in the collection of the Rationalized English-French
+Semantic Divergences corpus, dubbed <a href="https://github.com/Elbria/xling-SemDiv/tree/master/REFreSD" target="_blank">REFreSD</a>.
+My main goal is <strong>not</strong> to describe REFreSD per se but rather to use it as
+an example to provide a holistic view of the annotation workflow that is
+often missing from paper descriptions. Therefore, I will not
+cover details that are too specific to the dataset at hand.
+If you are interested in that, you can check out the Appendix of <a href="https://arxiv.org/pdf/2010.03662.pdf" target="_blank">our paper</a>.</p>
+
+<p>This blog provides:</p>
+
+<p>&nbsp; &nbsp; ✔️ a complete depiction of the <strong>annotation workflow</strong>; <br>
+&nbsp; &nbsp; ✔️ a full description of <strong>Data Statements</strong>; <br>
+&nbsp; &nbsp; ✔️ a <strong>DataSheet</strong> for REFreSD; <br>
+&nbsp; &nbsp; ✔️ a list of documents reviewed by the Institutional Review Board at UMD. <br></p>
+
+<p>If you don&rsquo;t know what <a href="https://www.aclweb.org/anthology/Q18-1041.pdf" target="_blank">Data Statements</a> and
+<a href="https://arxiv.org/pdf/1803.09010.pdf" target="_blank">Datasheets for Datasets</a> are, follow the links and check out the papers!</p>
+
+<hr />
+
+<h3 id="introduction">Introduction</h3>
+
+<p>REFreSD is published at EMNLP 2020 by  <a href="http://localhost:1313/#about" target="_blank">Eleftheria</a> and <a href="https://www.cs.umd.edu/~marine/" target="_blank">Marine</a>.</p>
+
+<p><strong>Motivation:</strong> The project under which REFreSD is collected
+ aims to advance our fundamental understanding of the computational representations and methods to compare and contrast text meaning <strong>across languages</strong>. Currently, much cross-lingual work in Natural
+ Language Processing relies on the assumption that sentences drawn from parallel corpora are equivalent in meaning.
+ Yet, content conveyed in two distinct languages is rarely exactly equivalent. The ability of
+computational methods to detect such meaning mismatches can be assessed by comparing their predictions with human judgments in
+ REFreSD.</p>
+
+<p><strong>Annotation task:</strong> Human annotators were asked to read text excerpts in two languages (e.g., one in English and another in French). We collect their assessment of the meaning differences they observe via sentence-level divergence judgments token-level rationales.</p>
+
+<hr />
+
+<h3 id="annotation-workflow">Annotation workflow</h3>
+
+<p><a href="files/REFreSD.pdf" target="_blank">This chart</a> presents the annotation workflow used for collecting REFreSD. People involved
+in each step of the process are listed on the right, while documents those people are presented
+with are shown on the left.</p>
+
+<hr />
+
+<h3 id="documentation">Documentation</h3>
+
+<p>We publish all documents related to the (left side) annotation workflow:</p>
+
+<p>&nbsp; &nbsp; &nbsp; 1️⃣ <a href="files/REFreSD_Annotation_Guidelines.pdf" target="_blank">GUIDELINES</a> includes the exact wording presented to participants; <br>
+&nbsp; &nbsp; &nbsp; 2️⃣ <a href="files/REFreSD_Ethical_Review.pdf" target="_blank">PROCEDURES</a> covers text reviewed by the Institutional Review Board at UMD; <br>
+&nbsp; &nbsp; &nbsp; 3️⃣ <a href="files/REFreSD_Recruiting_email.pdf" target="_blank">ADVERTISING</a> presents the email used to recruit participants; <br>
+&nbsp; &nbsp; &nbsp; 4️⃣ <a href="files/REFreSD_Data_Statements.pdf" target="_blank">DATA STATEMETS for REFreSD</a>; <br>
+&nbsp; &nbsp; &nbsp; 5️⃣ <a href="files/REFreSD_Datasheet.pdf" target="_blank">DATASHEET for REFreSD</a>.<br></p>
+
+<hr />
+
+<h3 id="baselines">Baselines</h3>
+
+<p>The Divergent mBERT paper presents several baselines for the prediction of semantic divergences at a sentence and token level.
+ Code is available <a href="https://github.com/Elbria/xling-SemDiv" target="_blank">here</a>.</p>
+
+<hr />
+
+<h3 id="acknowledgments">Acknowledgments</h3>
+
+<p>This dataset was collected after discussions and feedback among the following folks:
+Sweta Agrawal,
+Dennis Asamoah Owusu,
+Valerio Basile,
+Emily Bender,
+Tommaso Caselli,
+Pranav Goel,
+Ching-Lin Huang,
+Nina Kamooei,
+Marianna Martindale,
+Alexander Miserlis Hoyle,
+Aquia Richburgh, and
+Weijia Xu. Thanks all!</p>
+
+<hr />
+
+<h3 id="references">References</h3>
+
+<ul>
+<li><a href="https://arxiv.org/pdf/2010.03662.pdf" target="_blank">Detecting Fine-Grained Cross-Lingual Semantic Divergences without Supervision by Learning to Rank</a></li>
+<li><a href="https://www.aclweb.org/anthology/Q18-1041.pdf" target="_blank">Data Statements for Natural Language Processing: Toward Mitigating System Bias and Enabling Better Science</a></li>
+<li><a href="https://arxiv.org/pdf/1803.09010.pdf" target="_blank">Datasheets for Datasets</a></li>
+</ul>
+
+    </div>
+
+    
+
+
+    
+
+
+
+    
+      
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+  
+
+
+
+
+
+  
+  
+  
+    
+  
+  
+  <div class="media author-card" itemscope itemtype="http://schema.org/Person">
+    
+      
+      <img class="portrait mr-3" src="/authors/admin/avatar_hu6aacef72fe6b76157a1f6a1069308c9c_2458698_250x250_fill_q100_lanczos_center.jpg" itemprop="image" alt="Avatar">
+    
+
+    <div class="media-body">
+      <h5 class="card-title" itemprop="name"><a href="https://elbria.github.io/">Eleftheria Briakou</a></h5>
+      <h6 class="card-subtitle">Ph.D. Student</h6>
+      <p class="card-text" itemprop="description">My research interests span semantics, multilingual NLP and machine translation.</p>
+      <ul class="network-icon" aria-hidden="true">
+        
+          
+          
+          
+            
+          
+          
+          
+          
+          
+          <li>
+            <a itemprop="sameAs" href="mailto:ebriakou@sc.umd.edu" >
+              <i class="fas fa-envelope"></i>
+            </a>
+          </li>
+        
+          
+          
+          
+            
+          
+          
+          
+          
+          
+            
+          
+          <li>
+            <a itemprop="sameAs" href="https://twitter.com/ebriakou" target="_blank" rel="noopener">
+              <i class="fab fa-twitter"></i>
+            </a>
+          </li>
+        
+          
+          
+          
+          
+          
+          
+          
+            
+          
+          <li>
+            <a itemprop="sameAs" href="https://scholar.google.com/citations?user=bxqqNFEAAAAJ&amp;hl=el&amp;oi=ao" target="_blank" rel="noopener">
+              <i class="ai ai-google-scholar"></i>
+            </a>
+          </li>
+        
+          
+          
+          
+            
+          
+          
+          
+          
+          
+            
+          
+          <li>
+            <a itemprop="sameAs" href="https://github.com/Elbria" target="_blank" rel="noopener">
+              <i class="fab fa-github"></i>
+            </a>
+          </li>
+        
+          
+          
+          
+          
+          
+          
+          
+            
+          
+          <li>
+            <a itemprop="sameAs" href="https://www.researchgate.net/profile/Eleftheria_Briakou" target="_blank" rel="noopener">
+              <i class="ai ai-researchgate"></i>
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+
+
+      
+      
+    
+
+    
+    <div class="article-widget">
+      
+<div class="post-nav">
+  
+  
+  
+  <div class="post-nav-item">
+    <div class="meta-nav">Previous</div>
+    <a href="/post/mturk/" rel="prev">Amazon Mechanical Turk Tutorial </a>
+  </div>
+  
+</div>
+
+    </div>
+    
+
+    
+
+
+  </div>
+</article>
+
+      
+
+    
+    
+
+    
+    
+    
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/4.1.4/imagesloaded.pkgd.min.js" integrity="sha256-lqvxZrPLtfffUl2G/e7szqSvPBILGbwmsGE1MKlOi0Q=" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.6/isotope.pkgd.min.js" integrity="sha256-CBrpuqrMhXwcLLUd5tvQ4euBHCdh7wGlDfNz8vbu/iI=" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.2.5/jquery.fancybox.min.js" integrity="sha256-X5PoE3KU5l+JcX+w09p/wHl9AzK333C4hJ2I9S5mD4M=" crossorigin="anonymous"></script>
+
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mermaid/8.0.0/mermaid.min.js" integrity="sha256-0w92bcB21IY5+rGI84MGj52jNfHNbXVeQLrZ0CGdjNY=" crossorigin="anonymous" title="mermaid"></script>
+      
+
+      
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/highlight.min.js" integrity="sha256-aYTdUrn6Ow1DDgh5JTc3aDGnnju48y/1c8s1dgkYPQ8=" crossorigin="anonymous"></script>
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/languages/python3.min.js"></script>
+        
+      
+
+      
+      
+    
+
+    
+    
+
+    
+    
+    <script>hljs.initHighlightingOnLoad();</script>
+    
+
+    
+    
+    <script>
+      const search_index_filename = "/index.json";
+      const i18n = {
+        'placeholder': "Search...",
+        'results': "results found",
+        'no_results': "No results found"
+      };
+      const content_type = {
+        'post': "Posts",
+        'project': "Projects",
+        'publication' : "Publications",
+        'talk' : "Talks"
+        };
+    </script>
+    
+
+    
+    
+
+    
+    
+    <script id="search-hit-fuse-template" type="text/x-template">
+      <div class="search-hit" id="summary-{{key}}">
+      <div class="search-hit-content">
+        <div class="search-hit-name">
+          <a href="{{relpermalink}}">{{title}}</a>
+          <div class="article-metadata search-hit-type">{{type}}</div>
+          <p class="search-hit-description">{{snippet}}</p>
+        </div>
+      </div>
+      </div>
+    </script>
+    
+
+    
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/3.2.1/fuse.min.js" integrity="sha256-VzgmKYmhsGNNN4Ph1kMW+BjoYJM2jV5i4IlFoeZA9XI=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/jquery.mark.min.js" integrity="sha256-4HLtjeVgH0eIB3aZ9mLYF6E8oU5chNdjU6p6rrXpl9U=" crossorigin="anonymous"></script>
+    
+
+    
+    
+
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+      
+    
+    
+    
+    
+    <script src="/js/academic.min.16bbb3750feb7244c9bc409a5a4fe678.js"></script>
+
+    
+
+
+
+
+
+
+  
+  <div class="container">
+    <footer class="site-footer">
+  
+
+  <p class="powered-by">
+    &copy; 2021 Eleftheria Briakou &middot; 
+
+    Powered by the
+    <a href="https://sourcethemes.com/academic/" target="_blank" rel="noopener">Academic theme</a> for
+    <a href="https://gohugo.io" target="_blank" rel="noopener">Hugo</a>.
+
+    
+    <span class="float-right" aria-hidden="true">
+      <a href="#" id="back_to_top">
+        <span class="button_icon">
+          <i class="fas fa-chevron-up fa-2x"></i>
+        </span>
+      </a>
+    </span>
+    
+  </p>
+</footer>
+
+  </div>
+  
+
+  
+<div id="modal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Cite</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <pre><code class="tex hljs"></code></pre>
+      </div>
+      <div class="modal-footer">
+        <a class="btn btn-outline-primary my-1 js-copy-cite" href="#" target="_blank">
+          <i class="fas fa-copy"></i> Copy
+        </a>
+        <a class="btn btn-outline-primary my-1 js-download-cite" href="#" target="_blank">
+          <i class="fas fa-download"></i> Download
+        </a>
+        <div id="modal-error"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>
