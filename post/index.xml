@@ -1,22 +1,22 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Posts | eleftheria </title>
-    <link>https://elbria.github.io/post/</link>
-      <atom:link href="https://elbria.github.io/post/index.xml" rel="self" type="application/rss+xml" />
+    <title>Posts | qqphung </title>
+    <link>https://qqphung.github.io/post/</link>
+      <atom:link href="https://qqphung.github.io/post/index.xml" rel="self" type="application/rss+xml" />
     <description>Posts</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© 2021 Eleftheria Briakou</copyright><lastBuildDate>Tue, 27 Oct 2020 00:00:00 +0000</lastBuildDate>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© 2021 Quynh Phung</copyright><lastBuildDate>Tue, 27 Oct 2020 00:00:00 +0000</lastBuildDate>
     <image>
-      <url>https://elbria.github.io/img/icon-192.png</url>
+      <url>https://qqphung.github.io/img/icon-192.png</url>
       <title>Posts</title>
-      <link>https://elbria.github.io/post/</link>
+      <link>https://qqphung.github.io/post/</link>
     </image>
     
     <item>
       <title>Rationalized English-French Semantic Divergences: annotation workflow</title>
-      <link>https://elbria.github.io/post/refresd/</link>
+      <link>https://qqphung.github.io/post/refresd/</link>
       <pubDate>Tue, 27 Oct 2020 00:00:00 +0000</pubDate>
-      <guid>https://elbria.github.io/post/refresd/</guid>
+      <guid>https://qqphung.github.io/post/refresd/</guid>
       <description>
 
 &lt;p&gt;In this blog post, I go through (all) annotation decisions involved in the collection of the Rationalized English-French
@@ -111,9 +111,9 @@ Weijia Xu. Thanks all!&lt;/p&gt;
     
     <item>
       <title>Amazon Mechanical Turk Tutorial </title>
-      <link>https://elbria.github.io/post/mturk/</link>
+      <link>https://qqphung.github.io/post/mturk/</link>
       <pubDate>Sun, 19 Jan 2020 00:00:00 +0000</pubDate>
-      <guid>https://elbria.github.io/post/mturk/</guid>
+      <guid>https://qqphung.github.io/post/mturk/</guid>
       <description>
 
 &lt;p&gt;Amazon Mechanical Turk (MTurk) is a crowdsourcing marketplace that can be used to get human annotations via hiring workers to perform human intelligent tasks (HITs). In this tutorial, we are going to cover the basics on how to set up an evaluation task on MTurk from scratch. To this end, we will be focusing on the evaluation of the semantic similarity between sentences as our exemplar task; though all steps described could be easily adapted to any task.&lt;/p&gt;

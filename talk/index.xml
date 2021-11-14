@@ -1,38 +1,38 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>eleftheria </title>
-    <link>https://elbria.github.io/talk/</link>
-      <atom:link href="https://elbria.github.io/talk/index.xml" rel="self" type="application/rss+xml" />
-    <description>eleftheria </description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© 2021 Eleftheria Briakou</copyright><lastBuildDate>Wed, 20 Oct 2021 10:00:00 +0000</lastBuildDate>
+    <title>qqphung </title>
+    <link>https://qqphung.github.io/talk/</link>
+      <atom:link href="https://qqphung.github.io/talk/index.xml" rel="self" type="application/rss+xml" />
+    <description>qqphung </description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© 2021 Quynh Phung</copyright><lastBuildDate>Wed, 20 Oct 2021 10:00:00 +0000</lastBuildDate>
     <image>
-      <url>https://elbria.github.io/img/icon-192.png</url>
-      <title>eleftheria </title>
-      <link>https://elbria.github.io/talk/</link>
+      <url>https://qqphung.github.io/img/icon-192.png</url>
+      <title>qqphung </title>
+      <link>https://qqphung.github.io/talk/</link>
     </image>
     
     <item>
       <title> How do cross-lingual semantic divergences impact neural machine translation? </title>
-      <link>https://elbria.github.io/talk/nlp_with_friends/</link>
+      <link>https://qqphung.github.io/talk/nlp_with_friends/</link>
       <pubDate>Wed, 20 Oct 2021 10:00:00 +0000</pubDate>
-      <guid>https://elbria.github.io/talk/nlp_with_friends/</guid>
+      <guid>https://qqphung.github.io/talk/nlp_with_friends/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Cross-lingual Semantic Divergences</title>
-      <link>https://elbria.github.io/talk/seminar_lecture/</link>
+      <link>https://qqphung.github.io/talk/seminar_lecture/</link>
       <pubDate>Thu, 15 Apr 2021 15:00:00 +0000</pubDate>
-      <guid>https://elbria.github.io/talk/seminar_lecture/</guid>
+      <guid>https://qqphung.github.io/talk/seminar_lecture/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Detecting Semantic Divergences: An empirical study on English-French bitexts</title>
-      <link>https://elbria.github.io/talk/masc_slp/</link>
+      <link>https://qqphung.github.io/talk/masc_slp/</link>
       <pubDate>Fri, 06 Mar 2020 00:00:00 +0000</pubDate>
-      <guid>https://elbria.github.io/talk/masc_slp/</guid>
+      <guid>https://qqphung.github.io/talk/masc_slp/</guid>
       <description></description>
     </item>
     
