@@ -1,0 +1,306 @@
+<script src="http://www.google.com/jsapi" type="text/javascript"></script> 
+<script type="text/javascript">google.load("jquery", "1.3.2");</script>
+
+<style type="text/css">
+	html * {
+		font-family: Arial !important;
+	}
+	body {
+		font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
+		font-weight:300;
+		font-size:18px;
+		margin-left: auto;
+		margin-right: auto;
+		width: 1100px;
+	}
+	
+	h1 {
+		font-size:32px;
+		font-weight:300;
+	}
+	
+	.disclaimerbox {
+		background-color: #eee;		
+		border: 1px solid #eeeeee;
+		border-radius: 10px ;
+		-moz-border-radius: 10px ;
+		-webkit-border-radius: 10px ;
+		padding: 20px;
+	}
+
+	video.header-vid {
+		height: 140px;
+		border: 1px solid black;
+		border-radius: 10px ;
+		-moz-border-radius: 10px ;
+		-webkit-border-radius: 10px ;
+	}
+	
+	img.header-img {
+		height: 140px;
+		border: 1px solid black;
+		border-radius: 10px ;
+		-moz-border-radius: 10px ;
+		-webkit-border-radius: 10px ;
+	}
+	
+	img.rounded {
+		border: 1px solid #eeeeee;
+		border-radius: 10px ;
+		-moz-border-radius: 10px ;
+		-webkit-border-radius: 10px ;
+	}
+	
+	a:link,a:visited
+	{
+		color: #1367a7;
+		text-decoration: none;
+	}
+	a:hover {
+		color: #208799;
+	}
+	
+	td.dl-link {
+		height: 160px;
+		text-align: center;
+		font-size: 22px;
+	}
+	
+	.layered-paper-big { /* modified from: http://css-tricks.com/snippets/css/layered-paper/ */
+		box-shadow:
+		0px 0px 1px 1px rgba(0,0,0,0.35), /* The top layer shadow */
+		5px 5px 0 0px #fff, /* The second layer */
+		5px 5px 1px 1px rgba(0,0,0,0.35), /* The second layer shadow */
+		10px 10px 0 0px #fff, /* The third layer */
+		10px 10px 1px 1px rgba(0,0,0,0.35), /* The third layer shadow */
+		15px 15px 0 0px #fff, /* The fourth layer */
+		15px 15px 1px 1px rgba(0,0,0,0.35), /* The fourth layer shadow */
+		20px 20px 0 0px #fff, /* The fifth layer */
+		20px 20px 1px 1px rgba(0,0,0,0.35), /* The fifth layer shadow */
+		25px 25px 0 0px #fff, /* The fifth layer */
+		25px 25px 1px 1px rgba(0,0,0,0.35); /* The fifth layer shadow */
+		margin-left: 10px;
+		margin-right: 45px;
+	}
+
+	.paper-big { /* modified from: http://css-tricks.com/snippets/css/layered-paper/ */
+		box-shadow:
+		0px 0px 1px 1px rgba(0,0,0,0.35); /* The top layer shadow */
+
+		margin-left: 10px;
+		margin-right: 45px;
+	}
+	.content-block {
+		padding-top: 1em;
+        padding-left: 2em;
+        padding-right: 2em;
+        padding-bottom: 2em;
+      }
+      .overview-video {
+        background-color: rgb(240,240,240);
+    }	
+
+	.layered-paper { /* modified from: http://css-tricks.com/snippets/css/layered-paper/ */
+		box-shadow:
+		0px 0px 1px 1px rgba(0,0,0,0.35), /* The top layer shadow */
+		5px 5px 0 0px #fff, /* The second layer */
+		5px 5px 1px 1px rgba(0,0,0,0.35), /* The second layer shadow */
+		10px 10px 0 0px #fff, /* The third layer */
+		10px 10px 1px 1px rgba(0,0,0,0.35); /* The third layer shadow */
+		margin-top: 5px;
+		margin-left: 10px;
+		margin-right: 30px;
+		margin-bottom: 5px;
+	}
+	
+	.vert-cent {
+		position: relative;
+		top: 50%;
+		transform: translateY(-50%);
+	}
+	
+	hr
+	{
+		border: 0;
+		height: 1px;
+		background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
+	}
+</style>
+
+<html>
+<head>
+	<title>Toward Realistic Single-View 3D Object Reconstruction with Unsupervised Learning from Multiple Images</title>
+	<meta property="og:image" content="./resources/teaser.png"/> <!-- Facebook automatically scrapes this. Go to https://developers.facebook.com/tools/debug/ if you update and want to force Facebook to rescrape. -->
+	<meta property="og:title" content="Toward Realistic Single-View 3D Object Reconstruction with Unsupervised Learning from Multiple Images" />
+	<meta property="og:description" content="LeMul - 3D Object Reconstruction - ICCV 2021" />
+
+	<!-- Get from Google Analytics -->
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src=""></script> 
+	<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag(){dataLayer.push(arguments);}
+		gtag('js', new Date());
+
+		gtag('config', 'UA-75863369-6');
+	</script>
+</head>
+
+<body>
+	<br>
+	<center>
+		<span style="font-size:36px">Toward Realistic Single-View 3D Object Reconstruction with Unsupervised Learning from Multiple Images</span>
+		<br>
+		<br>
+		<span style="font-size:26px">ICCV 2021</span>
+		<br>
+		<br>
+		<table align=center width=650px>
+			<table align=center width=650px>
+				<tr>
+					<td align=center width=150px>
+						<center>
+							<span style="font-size:20px; font-weight: bold;"><a href="https://longnhatne.github.io">Long-Nhat Ho</a></span>
+						</center>
+					</td>
+					<td align=center width=150px>
+						<center>
+							<span style="font-size:20px; font-weight: bold;"><a href="https://scholar.google.com/citations?user=FYZ5ODQAAAAJ&hl=en">Anh Tran</a></span>
+						</center>
+					</td>
+					<td align=center width=150px>
+						<center>
+							<span style="font-size:20px; font-weight: bold;"><a href="/">Quynh Phung</a></span>
+						</center>
+					</td>
+					<td align=center width=150px>
+						<center>
+							<span style="font-size:20px; font-weight: bold;"><a href="https://www3.cs.stonybrook.edu/~minhhoai/">Minh Hoai</a></span>
+						</center>
+					</td>
+				</tr>
+			</table>
+			<br>
+			<table align=center width=380px>
+				<tr>
+					<td align=center width=120px>
+						<center>
+							<span style="font-size:24px"><a href='http://openaccess.thecvf.com/content/ICCV2021/papers/Ho_Toward_Realistic_Single-View_3D_Object_Reconstruction_With_Unsupervised_Learning_From_ICCV_2021_paper.pdf'>[Paper]</a></span>
+						</center>
+					</td>
+					<td align=center width=120px>
+						<center>
+							<span style="font-size:24px"><a href='https://github.com/VinAIResearch/LeMul'>[GitHub]</a></span><br>
+						</center>
+					</td>
+					<td align=center width=120px>
+						<center>
+							<span style="font-size:24px"><a href='https://www.youtube.com/watch?v=wnxv_Avx99c'>[Video]</a></span><br>
+						</center>
+					</td>
+				</tr>
+			</table>
+		</table>
+	</center>
+	<br>
+	<br>
+	<center>
+		<table align=center width=800px>
+			<tr>
+				<td width=500px>
+					<center>
+						<img class="round" style="width:800px" src="./resources/teaser.png"/>
+					</center>
+				</td>
+			</tr>
+		</table>
+	</center>
+
+	<hr>
+	<div class="content-block overview-video">
+		<table align=center width=1000px>
+			<center><h1 style="font-weight: bold;">Abstract</h1></center>
+			<tr>
+				<td style="font-size:20px ">
+					Recovering the 3D structure of an object from a single image is a challenging task due to its ill-posed nature. One approach is to utilize the plentiful photos of the same object category to learn a strong 3D shape prior for the object. This approach has successfully been demonstrated by a recent work of Wu et al. (2020), which obtained impressive 3D reconstruction networks with unsupervised learning. However, their algorithm is only applicable to symmetric objects. In this paper, we eliminate the symmetry requirement with a novel unsupervised algorithm that can learn a 3D reconstruction network from a multi-image dataset. Our algorithm is more general and covers the symmetry-required scenario as a special case. Besides, we employ a novel albedo loss that  improves the reconstructed details and realisticity. Our method surpasses the previous work in both quality and robustness, as shown in experiments on datasets of various structures, including single-view, multi-view, image-collection, and video sets.
+				</td>
+			</tr>
+		</table>
+	</div>
+	<br>
+
+<!--	<hr>-->
+<!--	<center><h1>Talk</h1></center>-->
+<!--	<p align="center">-->
+<!--		<iframe width="660" height="395" src="https://www.youtube.com/embed/dQw4w9WgXcQ" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen align="center"></iframe>-->
+<!--	</p>-->
+
+<!--	<table align=center width=800px>-->
+<!--		<br>-->
+<!--		<tr>-->
+<!--			<center>-->
+<!--				<span style="font-size:28px"><a href=''>[Slides]</a>-->
+<!--				</span>-->
+<!--			</center>-->
+<!--		</tr>-->
+<!--	</table>-->
+<!--	<hr>-->
+
+	<center><h1 style="font-weight: bold;">Method Overview</h1></center>
+	<table align=center width=800px>
+		<tr>
+			<td align=center width=800px>
+				<center>
+					<td><img class="round" style="width:800px" src="./resources/network.png"/></td>
+				</center>
+			</td>
+		</tr>
+	</table>
+	<table align=center width=800px style="margin-top: 1em;">
+		<center>
+			<tr>
+				<td align=center>
+					<span style="font-weight: bold; font-size: 20px; text-align: center;"> Overview of the LeMul system.</span> <br>
+					<span style="font-size: 20px; ">We train a decomposing network to optimize different loss components.<br> Note that we use diffuse shading images to visualize depth maps.</span>
+				</td>
+			</tr>
+		</center>
+	</table>
+	
+	<hr>
+	<center><h1 style="font-weight: bold;">Results</h1></center>
+
+	<table align=center width=420px>
+		<center>
+			<tr>
+				<td>
+				</td>
+			</tr>
+		</center>
+	</table>
+	<table align=center width=800px>
+		<tr>
+			<td align=center width=800px>
+				<center>
+					<td><img class="round" style="width:800px" src="./resources/results.png"/></td>
+				</center>
+			</td>
+		</tr>
+	</table>
+	<br>
+	<hr>
+
+	<table align=center width=900px>
+		<tr>
+			<td width=400px align=center>
+				<left>
+					<center><h1>Acknowledgements</h1></center>
+					This project was greatly inspired by <a href="https://elliottwu.com/projects/unsup3d/">Unsup3d (LeSym)</a>
+			</td>
+		</tr>
+	</table>
+
+<br>
+</body>
+</html>
+
